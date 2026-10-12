@@ -430,3 +430,19 @@ section[id]{scroll-margin-top:64px}
 @media (prefers-reduced-motion:reduce){.ig-cap{transition:none;transform:none}.ig-tile img{transition:none}}
 .site-header .btn-sm{flex:none;white-space:nowrap}
 @media (min-width:960px) and (max-width:1199px){.nav{gap:.9rem;font-size:.78rem;letter-spacing:.03em}.site-header{gap:12px}}
+/* seo: breadcrumbs + yazı bölümleri */
+.crumbs{margin-bottom:1rem;font-size:.82rem;letter-spacing:.04em;color:var(--ink-2)}
+.crumbs ol{display:flex;flex-wrap:wrap;gap:.2rem .5rem}
+.crumbs li+li::before{content:"/";margin-right:.5rem;opacity:.5}
+.crumbs a{text-decoration:underline;text-underline-offset:3px}
+.lp-prose{padding-block:clamp(40px,6vw,90px)}
+.lp-prose>*{max-width:46em;margin-inline:auto}
+.prose-h{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:1.2rem}
+.lp-prose h3{font-size:clamp(1.5rem,3vw,1.9rem);font-weight:400;margin:2rem 0 .6rem}
+.lp-prose p{color:var(--ink-2);margin-bottom:1rem}
+.lp-prose a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--coral)}
+.prose-steps{list-style:decimal;padding-left:1.4rem;color:var(--ink-2);margin-bottom:1rem}
+.prose-steps li{margin-bottom:.4rem;padding-left:.3rem}
+.prose-list{list-style:disc;padding-left:1.4rem;color:var(--ink-2);margin-bottom:1rem}
+.prose-list li{margin-bottom:.5rem}
+.home-prose{padding-block:clamp(50px,8vw,110px)}

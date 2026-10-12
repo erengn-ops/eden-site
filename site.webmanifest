@@ -1,0 +1,16 @@
+{
+  "name": "Eden Floral Art",
+  "short_name": "Eden Floral Art",
+  "description": "Elde hazırlanan dev çiçekler: doğum odası süsü, nişan ve düğün dekoru, vitrin tasarımı, lambader.",
+  "lang": "tr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#f6efe7",
+  "theme_color": "#f6efe7",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
