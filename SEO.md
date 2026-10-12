@@ -33,7 +33,7 @@ Kelime kullanım ilkesi: birincil kelime title, H1, meta description ve ilk para
 
 ## 3. Sahibinin onaylaması gereken noktalar (HTML'de `TODO` yorumu)
 
-Onaylananlar (12 Ekim 2026): sipariş zamanı (genellikle 2–3 hafta önce), kargo (Türkiye geneli, en fazla 3–4 gün, ücret paket boyutuna göre), boyut (tasarıma göre değişir, kişiye/mekâna özel), satış ve kiralama (ikisi de), organizasyon firmaları için kiralama veya satın alma, BIRELIN / @ginzadesignjewelry / @zumicoevent adlarının anılma izni.
+Onaylananlar (12 Ekim 2026): sipariş zamanı (genellikle 2–3 hafta önce), üretim süresi (işe/tasarıma göre 1–3 hafta), kargo (yalnız kargo süresi: Türkiye geneli en fazla 3–4 gün, üretim buna dahil değil; ücret paket boyutuna göre), boyut (tasarıma göre değişir, kişiye/mekâna özel), satış ve kiralama (ikisi de), organizasyon firmaları için kiralama veya satın alma, BIRELIN / @ginzadesignjewelry / @zumicoevent adlarının anılma izni.
 
 Hâlâ açık:
 

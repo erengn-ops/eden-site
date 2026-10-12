@@ -53,7 +53,7 @@ Güncellemek için dosyaları değiştirip `git commit` + `git push` yeterlidir.
 
 ## Sahibinin onaylaması gereken noktalar (HTML içinde `TODO` yorumları)
 
-Onaylananlar (12 Ekim 2026): sipariş zamanı (genellikle 2–3 hafta önce), kargo (Türkiye geneli, en fazla 3–4 gün, ücret paket boyutuna göre), boyut (tasarıma göre değişir), satış ve kiralama (ikisi de), organizasyon firmaları için kiralama veya satın alma, BIRELIN / @ginzadesignjewelry / @zumicoevent adlarının anılma izni.
+Onaylananlar (12 Ekim 2026): sipariş zamanı (genellikle 2–3 hafta önce), üretim süresi (işe/tasarıma göre 1–3 hafta), kargo (yalnız kargo süresi: Türkiye geneli en fazla 3–4 gün, üretim buna dahil değil; ücret paket boyutuna göre), boyut (tasarıma göre değişir), satış ve kiralama (ikisi de), organizasyon firmaları için kiralama veya satın alma, BIRELIN / @ginzadesignjewelry / @zumicoevent adlarının anılma izni.
 
 Açık kalanlar:
 
