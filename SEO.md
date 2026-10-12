@@ -110,3 +110,5 @@ Emin olunmayan / sahibinin kontrol etmesi gerekenler:
 4. **Google yorumu**: memnun müşterilerden İşletme Profili'nde gerçek yorum isteyin (sahte/teşvikli yorum yok).
 5. **Instagram biyografi bağlantısı**: `https://edenfloralart.com/` (isterseniz `?utm_source=instagram`); vurgulanan gönderilere ilgili sayfa bağlantısı ekleyin.
 6. Yayından 2-4 hafta sonra Search Console Performans raporuna bakıp title/description'ları tıklama oranına göre ayarlayın.
+
+- **Kiralama kuralı (12 Eki 2026):** Kiralama yalnız İstanbul ve İzmir'de; diğer şehirlere yalnız satın alma + kargo (3–4 gün). Tüm kiralama metinleri, meta açıklamaları ve FAQ/JSON-LD buna göre nitelendi; "dev çiçek kiralama" anahtar kelimesi "İstanbul ve İzmir'de dev çiçek kiralama" olarak korundu. Yeni kiralama cümlesi eklerken bu kuralı belirtin.
