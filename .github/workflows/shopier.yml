@@ -1,8 +1,8 @@
 name: Shopier senkronu
 
+# Shopier, GitHub sunucularından gelen istekleri 403 ile reddediyor (12 Eki 2026).
+# Bu yüzden zamanlama kapalı; senkron yerel makinede çalışıyor. Elle tetikleme açık.
 on:
-  schedule:
-    - cron: "41 */6 * * *"   # 6 saatte bir
   workflow_dispatch:
 
 permissions:
