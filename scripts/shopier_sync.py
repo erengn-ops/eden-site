@@ -106,6 +106,19 @@ def save_webp(url, dest):
     return im.size
 
 
+CAT_LABELS = {"lambader": "Lambader", "masa": "Masa lambası", "cicek": "Dev çiçek"}
+
+
+def category(p):
+    """Shopier kart verisinde kategori yok; ad ve fiyattan çıkarılır."""
+    n = p["name"].upper()
+    if any(k in n for k in ("LİLYUM", "LILYUM", "GÜL", "BABY")):
+        return "cicek"
+    if p["price"] and p["price"] <= 5000:
+        return "masa"
+    return "lambader"
+
+
 def display_name(n):
     """'İKİLİ ORGANZE POLIN' -> 'İkili Organze Polin' (Türkçe büyük/küçük harf)."""
     n = re.sub(r"\s+", " ", n).strip()
@@ -133,24 +146,23 @@ def short(s, n):
 
 
 def card(p, prefix, lazy=True):
-    sold_out = False  # siparişe göre üretim: stok/tükendi gösterilmiyor
-    badge = p["badge"]
-    badge_html = f'<span class="shop-badge">{esc(badge)}</span>' if badge else ""
-    btn = (
-        '<span class="shop-btn is-off">Tükendi</span>' if sold_out else
-        f'<a class="shop-btn" href="{esc(p["url"])}" target="_blank" rel="noopener" '
-        f'data-shop-id="{p["id"]}" data-shop-name="{esc(p["name"])}" data-shop-price="{p["price"] or ""}">'
-        "<span>Sepete ekle</span></a>"
-    )
     lazy_attr = 'loading="lazy" ' if lazy else ""
+    name = display_name(p["name"])
+    cat = category(p)
+    badge_html = f'<span class="shop-badge">{esc(p["badge"])}</span>' if p["badge"] else ""
+    link = (f'href="{esc(p["url"])}" target="_blank" rel="noopener" data-shop-id="{p["id"]}" '
+            f'data-shop-name="{esc(name)}" data-shop-price="{p["price"] or ""}"')
     return (
-        f'<article class="shop-card{" is-sold" if sold_out else ""}">'
-        f'<a class="shop-img" href="{esc(p["url"])}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">'
+        f'<article class="shop-card" data-cat="{cat}">'
+        f'<div class="shop-img">'
         f'<img {lazy_attr}src="{prefix}{p["image"]}" width="{p["w"]}" height="{p["h"]}" '
-        f'alt="{esc(display_name(p["name"]))}: Eden Floral Art el yapımı tasarım">{badge_html}</a>'
-        f'<h3 class="shop-name">{esc(display_name(p["name"]))}</h3>'
-        f'<p class="shop-price">{esc(p["price_text"])}</p>'
-        f"{btn}</article>"
+        f'alt="{esc(name)}: Eden Floral Art el yapımı {esc(CAT_LABELS[cat].lower())}">{badge_html}'
+        f'<a class="shop-add" {link} aria-label="{esc(name)}, sepete ekle"><span>Sepete ekle</span></a>'
+        f'</div>'
+        f'<div class="shop-meta"><h3 class="shop-name"><a {link} tabindex="-1">{esc(name)}</a></h3>'
+        f'<p class="shop-price">{esc(p["price_text"])}</p></div>'
+        f'<p class="shop-cat">{esc(CAT_LABELS[cat])}</p>'
+        f"</article>"
     )
 
 
