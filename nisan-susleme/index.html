@@ -59,7 +59,10 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
  "@context": "https://schema.org",
  "@graph": [
   {
-   "@type": "Florist",
+   "@type": [
+    "Florist",
+    "LocalBusiness"
+   ],
    "@id": "https://edenfloralart.com/#business",
    "name": "Eden Floral Art",
    "description": "Elde hazırlanan dev kağıt, tül ve krapon çiçekler: doğum odası süsleme, nişan ve düğün dekoru, organizasyon firmalarına özel tasarım, vitrin tasarımı ve çiçek lambader.",
@@ -71,11 +74,29 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
     "height": 180
    },
    "image": "https://edenfloralart.com/images/og.jpg",
-   "areaServed": {
-    "@type": "Country",
-    "name": "Türkiye",
-    "identifier": "TR"
-   },
+   "areaServed": [
+    {
+     "@type": "City",
+     "name": "İstanbul",
+     "containedInPlace": {
+      "@type": "Country",
+      "name": "Türkiye"
+     }
+    },
+    {
+     "@type": "City",
+     "name": "İzmir",
+     "containedInPlace": {
+      "@type": "Country",
+      "name": "Türkiye"
+     }
+    },
+    {
+     "@type": "Country",
+     "name": "Türkiye",
+     "identifier": "TR"
+    }
+   ],
    "knowsAbout": [
     "dev çiçek",
     "dev kağıt çiçek",
@@ -93,7 +114,55 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
    "sameAs": [
     "https://www.instagram.com/eden.floralart/",
     "https://www.shopier.com/edenfloralart"
-   ]
+   ],
+   "founder": [
+    {
+     "@type": "Person",
+     "name": "Elif"
+    },
+    {
+     "@type": "Person",
+     "name": "Seren"
+    }
+   ],
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Eden Floral Art hizmetleri",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Doğum odası süsü ve hastane odası süsleme",
+       "url": "https://edenfloralart.com/dogum-odasi-susu/"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Nişan, söz, kına ve düğün süsleme",
+       "url": "https://edenfloralart.com/nisan-susleme/"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Vitrin süsleme ve vitrin çiçek dekoru",
+       "url": "https://edenfloralart.com/vitrin-tasarimi/"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Organizasyon firmaları için dev çiçek dekoru",
+       "url": "https://edenfloralart.com/organizasyon/"
+      }
+     }
+    ]
+   }
   },
   {
    "@type": "WebSite",
@@ -163,11 +232,29 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
    "provider": {
     "@id": "https://edenfloralart.com/#business"
    },
-   "areaServed": {
-    "@type": "Country",
-    "name": "Türkiye",
-    "identifier": "TR"
-   },
+   "areaServed": [
+    {
+     "@type": "City",
+     "name": "İstanbul",
+     "containedInPlace": {
+      "@type": "Country",
+      "name": "Türkiye"
+     }
+    },
+    {
+     "@type": "City",
+     "name": "İzmir",
+     "containedInPlace": {
+      "@type": "Country",
+      "name": "Türkiye"
+     }
+    },
+    {
+     "@type": "Country",
+     "name": "Türkiye",
+     "identifier": "TR"
+    }
+   ],
    "image": {
     "@id": "https://edenfloralart.com/nisan-susleme/#primaryimage"
    }
@@ -243,6 +330,46 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
     "@type": "Answer",
     "text": "Fiyat; çiçeğin boyutuna, adedine, rengine ve tasarımın kapsamına göre değişir. Fikrinizi DM'den yazın, size özel fiyat verelim."
    }
+  },
+  {
+   "@type": "Question",
+   "name": "Dev kağıt çiçek arka fon güneşte bozulur mu?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Krapon (kağıt) çiçekler güneşten etkilenebilir; bu yüzden doğrudan güneş ışığından uzak tutulmalıdır. Tül ve organze çiçekler güneşten etkilenmez. Açık hava etkinliği için mekânı ve saati yazarsanız malzemeyi birlikte seçeriz."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Nişan süsü için dev çiçek kiralayabilir miyim?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Evet. Dev çiçekleri hem satın alabilir hem kiralayabilirsiniz. Kiralama, tek geceliğine kurulan nişan, söz ve kına fonları için pratik bir seçenektir. Tercihinizi tarihle birlikte DM'den yazmanız yeterli."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "İstanbul ve İzmir'de nişan mekânına kurulum yapıyor musunuz?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yerinde kurulum genellikle İstanbul ve İzmir'de yapılabiliyor. Mekânı ve tarihi DM'den yazın, kurulumun mümkün olup olmadığını birlikte netleştirelim. Diğer şehirlere kargoyla gönderiyoruz."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Nişan süsünde taze çiçek yerine neden dev çiçek?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Çiçeklerimiz tül, krapon ve organzeden elde hazırlandığı için sezona bağlı değildir; istediğiniz renk ve modelde tasarlanabilir ve etkinlik boyunca aynı görünümde kalır."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Gelin-damat yolu ve takı töreni için bana ne gerekir?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Mekânınızın fotoğrafı, tarihiniz ve renk paletiniz yeterli. Setin kaç çiçekten oluşacağı ve yerleşimi alanınıza göre belirlenir."
+   }
   }
  ]
 }
@@ -314,6 +441,14 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
 <li>Hazır olunca Türkiye geneline kargoyla gönderilir; kargo süresi en fazla 3–4 gündür (üretim süresi buna dahil değildir), kargo ücreti paketin boyutuna göre değişir. Yerinde kurulum genellikle İstanbul ve İzmir'de yapılabiliyor; diğer şehirlere kargoyla gönderiyoruz.</li>
 </ol>
 <p>Ne kadar erken sipariş verilirse o kadar iyi; genellikle 2–3 hafta önceden sipariş verilmesini öneriyoruz.</p>
+<h3>Dev kağıt çiçek arka fon: krapon, tül ve organze farkı</h3>
+<p>"Dev kağıt çiçek" dediğimizde krapon (krepon kağıdı) ile hazırlanan büyük çiçekleri kastediyoruz; tül ve organze çiçekler ise kumaştan yapılır. Üçü de aynı fonda birlikte kullanılabilir. Krapon çiçekler güneşten etkilenebilir; tül ve organze etkilenmez. Etkinlik açık havada ve gün ışığında olacaksa malzeme seçimini birlikte konuşmak en doğrusudur; bunu DM'de mekânı ve saati yazarak başlatabilirsiniz.</p>
+<h3>Nişan süsü için zaman çizelgesi</h3>
+<p>Genellikle 2–3 hafta önceden sipariş verilmesini öneriyoruz. Üretim, tasarıma göre 1–3 hafta sürer; kargo en fazla 3–4 gündür ve üretim süresine dahil değildir. Tarihiniz ve mekânınız netleştiğinde yazarsanız müsaitliği hemen birlikte bakarız.</p>
+<h3>İstanbul, İzmir ve şehir dışı nişan süslemesi</h3>
+<p>Yerinde kurulum genellikle İstanbul ve İzmir'de yapılabiliyor. Başka bir şehirdeki nişan, söz ya da kına için çiçekler paketlenip kargoyla gönderilir. Dev çiçek kiralama ve satın alma seçeneklerinin ikisi de mümkün; tek geceliğine kurulan fonlarda kiralama pratik olabilir.</p>
+<h3>Çiçeklerin bakımı</h3>
+<p>Etkinlik sonrası ya da kurulum öncesinde çiçekleri güneşten uzak tutmak ve tozunu hafif nemli bezle almak yeterlidir. Ayrıntılı bilgi için <a href="../rehber/dev-kagit-cicek-bakimi/">Dev kağıt çiçek bakımı</a> rehberimize bakabilirsiniz.</p>
 <h3>Etkinliğe göre diğer sayfalar</h3>
 <p>Bebek karşılama için <a href="../dogum-odasi-susu/">doğum odası süsü</a>, mağaza vitrini için <a href="../vitrin-tasarimi/">vitrin çiçek dekoru</a>, organizatörler için <a href="../organizasyon/">organizasyon firmalarına özel dev çiçek tasarımları</a> sayfalarımıza bakabilirsiniz. Hazır lambaderler için <a href="https://www.shopier.com/edenfloralart" target="_blank" rel="noopener">Shopier mağazamız</a> açık.</p>
 </section>
@@ -326,7 +461,7 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
 
 <section class="faq wrap" aria-labelledby="h-sss">
   <header class="sec-head"><p class="eyebrow rv">Sıkça sorulanlar</p><h2 id="h-sss" class="rv">Merak <em>edilenler</em></h2></header>
-  <div class="faq-list"><details class="rv"><summary>Nişan veya düğün için ne kadar önce sipariş vermeliyim?</summary><div><p>Ne kadar erken sipariş verilirse o kadar iyi; genellikle 2–3 hafta önceden sipariş verilmesini öneriyoruz. Müsaitlik tarihe ve işin büyüklüğüne göre değişir.</p></div></details><details class="rv"><summary>Siparişim ne zaman hazır olur?</summary><div><p>Her parça siparişe özel elde yapıldığı için üretim, tasarıma göre 1–3 hafta sürebilir. Hazır olduktan sonra Türkiye'nin her yerine kargoyla en fazla 3–4 günde ulaşır; kargo ücreti paketin boyutuna göre değişir. Yerinde kurulum genellikle İstanbul ve İzmir'de yapılabiliyor.</p></div></details><details class="rv"><summary>Başka şehirde olan etkinliğe çiçek götürüyor musunuz?</summary><div><p>Tekirdağ'daki bir düğüne bizzat gittik. Yerinde kurulum genellikle İstanbul ve İzmir'de yapılabiliyor; diğer şehirlere kargoyla gönderiyoruz. Etkinliğiniz için DM'den konuşalım.</p></div></details><details class="rv"><summary>Renk ve model seçebilir miyim?</summary><div><p>Evet, istenilen renk ve modelde çalışabiliyoruz.</p></div></details><details class="rv"><summary>Çiçekleri satın alabilir miyim, kiralayabilir miyim?</summary><div><p>İkisi de mümkün: çiçekler satın alınabilir ya da kiralanabilir.</p></div></details><details class="rv"><summary>Çiçeklerin boyutu ne kadar?</summary><div><p>Boyutlar tasarıma göre büyük ölçüde değişir; her çiçek kişiye ve mekâna özel ölçülendirilir.</p></div></details><details class="rv"><summary>Türkiye geneline gönderim yapıyor musunuz?</summary><div><p>Evet, Türkiye'nin her yerine gönderim yapıyoruz. Her parça siparişe özel elde yapıldığı için üretim, tasarıma göre 1–3 hafta sürebilir; hazır olduktan sonra kargoyla Türkiye'nin her yerine en fazla 3–4 günde ulaşır. Kargo ücreti paketin boyutuna göre değişir.</p></div></details><details class="rv"><summary>Fiyatlar nasıl belirleniyor?</summary><div><p>Fiyat; çiçeğin boyutuna, adedine, rengine ve tasarımın kapsamına göre değişir. Fikrinizi DM'den yazın, size özel fiyat verelim.</p></div></details></div>
+  <div class="faq-list"><details class="rv"><summary>Nişan veya düğün için ne kadar önce sipariş vermeliyim?</summary><div><p>Ne kadar erken sipariş verilirse o kadar iyi; genellikle 2–3 hafta önceden sipariş verilmesini öneriyoruz. Müsaitlik tarihe ve işin büyüklüğüne göre değişir.</p></div></details><details class="rv"><summary>Siparişim ne zaman hazır olur?</summary><div><p>Her parça siparişe özel elde yapıldığı için üretim, tasarıma göre 1–3 hafta sürebilir. Hazır olduktan sonra Türkiye'nin her yerine kargoyla en fazla 3–4 günde ulaşır; kargo ücreti paketin boyutuna göre değişir. Yerinde kurulum genellikle İstanbul ve İzmir'de yapılabiliyor.</p></div></details><details class="rv"><summary>Başka şehirde olan etkinliğe çiçek götürüyor musunuz?</summary><div><p>Tekirdağ'daki bir düğüne bizzat gittik. Yerinde kurulum genellikle İstanbul ve İzmir'de yapılabiliyor; diğer şehirlere kargoyla gönderiyoruz. Etkinliğiniz için DM'den konuşalım.</p></div></details><details class="rv"><summary>Renk ve model seçebilir miyim?</summary><div><p>Evet, istenilen renk ve modelde çalışabiliyoruz.</p></div></details><details class="rv"><summary>Çiçekleri satın alabilir miyim, kiralayabilir miyim?</summary><div><p>İkisi de mümkün: çiçekler satın alınabilir ya da kiralanabilir.</p></div></details><details class="rv"><summary>Çiçeklerin boyutu ne kadar?</summary><div><p>Boyutlar tasarıma göre büyük ölçüde değişir; her çiçek kişiye ve mekâna özel ölçülendirilir.</p></div></details><details class="rv"><summary>Türkiye geneline gönderim yapıyor musunuz?</summary><div><p>Evet, Türkiye'nin her yerine gönderim yapıyoruz. Her parça siparişe özel elde yapıldığı için üretim, tasarıma göre 1–3 hafta sürebilir; hazır olduktan sonra kargoyla Türkiye'nin her yerine en fazla 3–4 günde ulaşır. Kargo ücreti paketin boyutuna göre değişir.</p></div></details><details class="rv"><summary>Fiyatlar nasıl belirleniyor?</summary><div><p>Fiyat; çiçeğin boyutuna, adedine, rengine ve tasarımın kapsamına göre değişir. Fikrinizi DM'den yazın, size özel fiyat verelim.</p></div></details><details class="rv"><summary>Dev kağıt çiçek arka fon güneşte bozulur mu?</summary><div><p>Krapon (kağıt) çiçekler güneşten etkilenebilir; bu yüzden doğrudan güneş ışığından uzak tutulmalıdır. Tül ve organze çiçekler güneşten etkilenmez. Açık hava etkinliği için mekânı ve saati yazarsanız malzemeyi birlikte seçeriz.</p></div></details><details class="rv"><summary>Nişan süsü için dev çiçek kiralayabilir miyim?</summary><div><p>Evet. Dev çiçekleri hem satın alabilir hem kiralayabilirsiniz. Kiralama, tek geceliğine kurulan nişan, söz ve kına fonları için pratik bir seçenektir. Tercihinizi tarihle birlikte DM'den yazmanız yeterli.</p></div></details><details class="rv"><summary>İstanbul ve İzmir'de nişan mekânına kurulum yapıyor musunuz?</summary><div><p>Yerinde kurulum genellikle İstanbul ve İzmir'de yapılabiliyor. Mekânı ve tarihi DM'den yazın, kurulumun mümkün olup olmadığını birlikte netleştirelim. Diğer şehirlere kargoyla gönderiyoruz.</p></div></details><details class="rv"><summary>Nişan süsünde taze çiçek yerine neden dev çiçek?</summary><div><p>Çiçeklerimiz tül, krapon ve organzeden elde hazırlandığı için sezona bağlı değildir; istediğiniz renk ve modelde tasarlanabilir ve etkinlik boyunca aynı görünümde kalır.</p></div></details><details class="rv"><summary>Gelin-damat yolu ve takı töreni için bana ne gerekir?</summary><div><p>Mekânınızın fotoğrafı, tarihiniz ve renk paletiniz yeterli. Setin kaç çiçekten oluşacağı ve yerleşimi alanınıza göre belirlenir.</p></div></details></div>
 </section>
 
 <section class="closing">
@@ -349,6 +484,7 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
       <a class="link-u" href="../vitrin-tasarimi/">Vitrin tasarımı</a>
       <a class="link-u" href="../organizasyon/">Organizasyon</a>
       <a class="link-u" href="../sosyal-medya/">Sosyal medya</a>
+      <a class="link-u" href="../rehber/">Rehber</a>
       <a class="link-u" href="https://www.instagram.com/eden.floralart/" target="_blank" rel="noopener">Instagram</a>
       <a class="link-u" href="https://www.shopier.com/edenfloralart" target="_blank" rel="noopener">Shopier</a>
       <a class="link-u" href="https://maps.app.goo.gl/ew2hRniWmJs75cL78" target="_blank" rel="noopener">Atölye (harita)</a>
