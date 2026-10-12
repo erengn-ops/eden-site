@@ -58,6 +58,33 @@
     try{ if(typeof window.gtag==='function') window.gtag('event','instagram_click'); }catch(_){}
   });
 
+  /* galeri: yatay kaydırma şeridi (sabitleme yok), oklar + sürükleme */
+  (function(){
+    var track=document.querySelector('.gallery-track');if(!track) return;
+    var bar=document.querySelector('.g-progress span');
+    var btns=document.querySelectorAll('.g-btn');
+    function upd(){
+      var max=track.scrollWidth-track.clientWidth;
+      var p=max>0?track.scrollLeft/max:0;
+      if(bar) bar.style.transform='scaleX('+Math.min(1,Math.max(0,p))+')';
+      btns.forEach(function(b){var d=+b.getAttribute('data-dir');b.disabled=d<0?track.scrollLeft<=2:track.scrollLeft>=max-2;});
+    }
+    track.addEventListener('scroll',upd,{passive:true});
+    window.addEventListener('resize',upd);window.addEventListener('load',upd);
+    track.querySelectorAll('img').forEach(function(im){if(!im.complete)im.addEventListener('load',upd,{once:true});});
+    btns.forEach(function(b){b.addEventListener('click',function(){
+      track.scrollBy({left:+b.getAttribute('data-dir')*track.clientWidth*0.7,behavior:reduce?'auto':'smooth'});
+    });});
+    if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+      var down=false,sx=0,sl=0,moved=false;
+      track.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse'||e.button!==0)return;down=true;moved=false;sx=e.clientX;sl=track.scrollLeft;});
+      window.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-sx;if(Math.abs(dx)>4){moved=true;track.classList.add('dragging');}if(moved)track.scrollLeft=sl-dx;});
+      window.addEventListener('pointerup',function(){if(!down)return;down=false;track.classList.remove('dragging');});
+      track.addEventListener('click',function(e){if(moved){e.preventDefault();moved=false;}},true);
+    }
+    upd();
+  })();
+
   /* heavy motion: Lenis + GSAP (progressive enhancement) */
   function init(){
     if(reduce||!window.gsap||!window.ScrollTrigger) return;
@@ -89,18 +116,10 @@
     gsap.to('.hero-copy',{yPercent:-8,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
     gsap.to('.petals',{yPercent:18,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
 
-    /* pinned horizontal gallery on desktop; native swipe elsewhere */
-    var mm=gsap.matchMedia();
-    mm.add('(min-width:960px) and (hover:hover)',function(){
-      var sec=document.querySelector('.gallery');if(!sec) return;var track=sec.querySelector('.gallery-track'),bar=sec.querySelector('.g-progress span');
-      sec.classList.add('pinned');
-      var dist=function(){return Math.max(0,track.scrollWidth-window.innerWidth+60);};
-      gsap.to(track,{x:function(){return -dist();},ease:'none',scrollTrigger:{trigger:sec,start:'top top',end:function(){return '+='+dist();},pin:true,scrub:.6,invalidateOnRefresh:true,anticipatePin:1,onUpdate:function(s){bar.style.transform='scaleX('+s.progress+')';}}});
-      return function(){sec.classList.remove('pinned');};
-    });
-
     var rt;function refresh(){clearTimeout(rt);rt=setTimeout(function(){ScrollTrigger.refresh();},150);}
     ScrollTrigger.refresh();
+    /* lazy görseller yüklendikçe konumları yeniden hesapla */
+    document.querySelectorAll('img').forEach(function(im){if(!im.complete)im.addEventListener('load',refresh,{once:true});});
     window.addEventListener('resize',refresh);
     window.addEventListener('orientationchange',refresh);
     if(document.fonts&&document.fonts.ready){document.fonts.ready.then(refresh);}

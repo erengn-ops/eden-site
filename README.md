@@ -11,8 +11,8 @@ eden-site/
   index.html          Tüm içerik, SEO etiketleri, JSON-LD (Florist)
   assets/style.css    Tüm stiller
   assets/main.js      Scroll animasyonları, galeri, mıknatıslı butonlar
-  images/*.webp       Galeri ve bölüm görselleri (Instagram'dan)
-  images/og.jpg       Sosyal medya paylaşım görseli (1200x630)
+  images/*.webp       Galeri, bölüm ve koleksiyon görselleri (sahibinin orijinal fotoğrafları + birkaç eski Instagram görseli)
+  images/og*.jpg      Sosyal medya paylaşım görselleri (1200x630; og, og-vitrin, og-nisan, og-organizasyon)
   dogum-odasi-susu/index.html   Reklam açılış sayfası: doğum odası süsü
   nisan-susleme/index.html      Reklam açılış sayfası: nişan, söz, kına, düğün
   vitrin-tasarimi/index.html    Reklam açılış sayfası: vitrin (BIRELIN Nişantaşı çalışması)
@@ -43,9 +43,7 @@ Güncellemek için dosyaları değiştirip `git commit` + `git push` yeterlidir.
 
 ## Yayından önce güncellenecekler
 
-1. **Görsel kalitesi:** Instagram'ın herkese açık görünümü en fazla ~640 px genişlik verdi. Fotoğraflar bu yüzden
-   küçük çerçevelerde kullanıldı. Orijinal yüksek çözünürlüklü dosyaları `images/` altına aynı adlarla (webp)
-   koyarsanız site hemen keskinleşir. `og.jpg` da büyütülmüş olduğundan orijinaliyle değiştirilmelidir.
+1. **Görsel kalitesi:** Sahibinin orijinal fotoğrafları (`foto-yeni/`, git'e eklenmez) WebP'ye çevrildi: büyük görseller 2000 px / 1000 px (srcset), ızgara görselleri 1000 px, EXIF/GPS silindi. Hâlâ eski Instagram görseli olan yerler: `dogum-odasi.webp`, `lilyum-dugun.webp`, `polin-lambader.webp`, `katli-cicek.webp` (orijinalleri aynı adla koyulursa keskinleşir). Doğum odası sayfasının hero görseli de eski görsel.
 2. **Adres/telefon:** JSON-LD'de bilinmediği için yok. Eklemek isterseniz `address` ve `telephone` alanlarını ekleyin.
    Profildeki "Atölye" harita bağlantısı (maps.app.goo.gl/ew2hRniWmJs75cL78) footer'a konuldu.
 
@@ -59,22 +57,19 @@ Güncellemek için dosyaları değiştirip `git commit` + `git push` yeterlidir.
 - "Yorumlar" öne çıkanlarındaki gerçek müşteri yorumları okunamadı; eklenmedi. İsterseniz referans bölümüne eklenebilir.
 - Fiyat veya teslim günü yazılmadı. Lambader indirim kodu (YAZ10) süreli olduğu için eklenmedi.
 
-## Görsel kaynakları (Instagram gönderileri, @eden.floralart)
+## Görsel kaynakları
+
+Hâlâ kullanılan eski Instagram görselleri (@eden.floralart):
 
 | Dosya | Gönderi |
 |---|---|
 | dogum-odasi.webp | /p/DeT1galCJs2 (doğum odası, @zumicoevent) |
 | lilyum-dugun.webp | /p/Db0iqSViClj (Tekirdağ düğünü, lilyum) |
-| vitrin-kose.webp | /reel/DeOa0rVoLVM (@ginzadesignjewelry vitrin/köşe, üst kısım kırpıldı) |
 | polin-lambader.webp | /reel/DWf93INiE_f (organze POLIN lambader) |
-| lambader-indirim.webp | /reel/DcIassIIqFn (lambader, üst kısım kırpıldı) |
-| dandelion-lilyum.webp | /p/Dd3cSd-CFbe (lilyum ve karahindiba) |
-| bahar-yosun.webp | /p/Dd_YC2ciM05 (yosun ve çiçek aranjmanı) |
-| renk-sonbahar.webp | /p/Dd57cfRCCTC (sonbahara yakışan renk) |
-| rengarenk.webp | /p/Ddqf-LyCEi_ (rengarenk çiçek modelleri) |
-| ranunculus.webp | /reel/Dd8a5ybozkM (ranunculus, üst kısım kırpıldı) |
 | katli-cicek.webp | /reel/Dd03N5moQTf (kat kat şakayık, üst kısım kırpıldı) |
-| og.jpg | /p/Db0iqSViClj |
+
+Diğer tüm görseller sahibinin verdiği orijinal fotoğraflardan üretildi (`vitrin-*` gerçek vitrin çekimleri, `atolye-*` Koleksiyon bölümü stüdyo çekimleri,
+`nisan-*`/`dugun-*`/`organizasyon-*` açık hava çekimleri). `dugun-beyaz-dev-cicek.webp`, gizlilik için çiftin karikatürü ve gazeteleri görünmeyecek şekilde kırpıldı.
 
 Metinlerde kullanılan gerçek ifadeler: "İstenilen renk ve modelde çalışabiliyoruz", "Her sene bir kaç çiçek ekleye
 ekleye geldiğimiz sonuç", tül/krapon/organze, Shopier'de lambader, Viyana'dan bulan çiftin Tekirdağ düğünü.
@@ -90,9 +85,3 @@ Sunucuda klasör adresleri (`/nisan-susleme/`) `index.html`'e düşecek şekilde
 Her sayfanın `<head>` kısmında yorum satırı halinde hazır bloklar var. Kullanmak için yorumu kaldırın ve `PIXEL_ID`, `AW-XXXX`, `G-XXXX` değerlerini doldurun
 (`TODO` işaretli). `assets/main.js` içindeki kanca, Instagram CTA tıklamalarında yalnızca fonksiyonlar yüklüyse
 `fbq('trackCustom','InstagramCTA')` ve `gtag('event','instagram_click')` çağırır. Çerez/KVKK onay bildirimi gerekebilir; eklenmedi.
-
-## Ek görsel kaynakları
-
-| Dosya | Gönderi |
-|---|---|
-| birelin-vitrin-1.webp, birelin-vitrin-2.webp | /p/DYrpEW4iJaA (BIRELIN Nişantaşı vitrin; yalnızca ilk görsel alınabildi, üzerindeki oynat simgesi yüzünden iki parçaya kırpıldı) |
