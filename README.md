@@ -17,6 +17,10 @@ eden-site/
   nisan-susleme/index.html      Reklam açılış sayfası: nişan, söz, kına, düğün
   vitrin-tasarimi/index.html    Reklam açılış sayfası: vitrin (BIRELIN Nişantaşı çalışması)
   organizasyon/index.html       Reklam açılış sayfası: organizasyon firmaları (B2B)
+  sosyal-medya/index.html       Sosyal medya sayfası: Instagram profil başlığı + karo karo gönderi ızgarası
+  assets/social.js              Sosyal medya ızgarasını data/instagram.json'dan çizer (yoksa HTML'deki statik karolar kalır)
+  data/instagram.json           Instagram gönderi verisi (GitHub Action yazar; şema aşağıda)
+  images/ig/*.webp              Instagram gönderi görselleri ve avatar (<gönderi kodu>.webp, avatar.webp)
   404.html            Bulunamayan adresler için sayfa (GitHub Pages bunu otomatik kullanır)
   favicon.svg, favicon-32.png, favicon.ico, apple-touch-icon.png   Simgeler (E monogramı)
   CNAME               GitHub Pages özel alan adı (edenfloralart.com)
@@ -85,3 +89,17 @@ Sunucuda klasör adresleri (`/nisan-susleme/`) `index.html`'e düşecek şekilde
 Her sayfanın `<head>` kısmında yorum satırı halinde hazır bloklar var. Kullanmak için yorumu kaldırın ve `PIXEL_ID`, `AW-XXXX`, `G-XXXX` değerlerini doldurun
 (`TODO` işaretli). `assets/main.js` içindeki kanca, Instagram CTA tıklamalarında yalnızca fonksiyonlar yüklüyse
 `fbq('trackCustom','InstagramCTA')` ve `gtag('event','instagram_click')` çağırır. Çerez/KVKK onay bildirimi gerekebilir; eklenmedi.
+
+## Sosyal medya sayfası (/sosyal-medya/)
+
+Karolar çalışma anında `/data/instagram.json` dosyasından çizilir (`assets/social.js`, en fazla 24 gönderi, yeniden eskiye).
+Sayfanın HTML'inde aynı karoların statik bir kopyası da vardır: JS kapalıyken veya JSON okunamazken görünen budur, JSON yüklenince değiştirilir.
+Bu statik kopya yalnızca ilk anlık görüntüdür (12 gönderi); güncel veri için `data/instagram.json` esastır. Gönderi görselleri `images/ig/<id>.webp`.
+
+Şema: `{"updated":ISO8601,"profile":{"username","bio":[...],"avatar":"/images/ig/avatar.webp"},"posts":[{"id","permalink","type":"IMAGE|VIDEO|CAROUSEL_ALBUM","caption","image","w","h","timestamp"}]}`.
+VIDEO karolarında reel, CAROUSEL_ALBUM karolarında yığın simgesi çıkar; üzerine gelince başlığın ilk ~100 karakteri görünür.
+
+Güncelleme: `data/instagram.json` ve `images/ig/` içeriğini GitHub Action (`.github/workflows/instagram.yml`, `scripts/instagram_sync.py`) üretir.
+Action çalışmazsa ızgara son commit edilen veriyle kalır; elle yenilemek için aynı şemada JSON'u ve görselleri değiştirip commit edin.
+İlk veri, çıkış yapılmış Instagram profilinden (tarayıcıyla) alındı: yalnızca ilk 12 gönderi görünür, tarih saatsiz (gün 00:00).
+Takipçi sayısı bilerek yazılmadı (eskir).
