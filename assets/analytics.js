@@ -33,6 +33,20 @@
     try{ if(typeof window.fbq==='function') window.fbq('trackCustom','InstagramCTA'); }catch(_){}
   });
 
+  /* Shopier: sepete ekle ve sepete git tıklamaları */
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href*="shopier.com"]');
+    if(!a) return;
+    if(a.hasAttribute('data-shop-id')){
+      var price=parseFloat(a.getAttribute('data-shop-price'))||undefined;
+      gtag('event','add_to_cart',{currency:'TRY',value:price,items:[{item_id:a.getAttribute('data-shop-id'),item_name:a.getAttribute('data-shop-name'),price:price,quantity:1}]});
+    }else if(a.hasAttribute('data-basket')){
+      gtag('event','begin_checkout',{currency:'TRY'});
+    }else{
+      gtag('event','shopier_click',{link_url:a.href,page_path:location.pathname});
+    }
+  });
+
   /* çerez bildirimi: yalnız seçim yapılmamışsa */
   if(saved) return;
   function banner(){
