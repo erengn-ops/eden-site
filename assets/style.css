@@ -461,3 +461,10 @@ section[id]{scroll-margin-top:64px}
 .guide-head>*,.guide-body>*{max-width:782px}
 .guide-body h3{margin-inline:auto}
 .lp-prose.guide-body h3 a{text-decoration:none;border-bottom:1px solid var(--coral)}
+
+/* çerez bildirimi */
+.consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:120;max-width:460px;margin-left:auto;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:0 18px 40px -20px rgba(43,31,36,.45);font-size:.88rem;line-height:1.55}
+.consent p{margin-bottom:12px}
+.consent-btns{display:flex;gap:10px;justify-content:flex-end}
+.consent button{font:inherit;font-size:.82rem;letter-spacing:.06em;border:1px solid var(--ink);border-radius:999px;padding:.55rem 1.2rem;background:transparent;color:var(--ink);cursor:pointer}
+.consent button.primary{background:var(--ink);color:var(--cream)}

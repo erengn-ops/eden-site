@@ -50,14 +50,6 @@
     });
   }
 
-  /* ad tracking hook: fires only if pixel / gtag are loaded */
-  document.addEventListener('click',function(e){
-    var a=e.target.closest&&e.target.closest('a[href*="instagram.com/eden.floralart"]');
-    if(!a) return;
-    try{ if(typeof window.fbq==='function') window.fbq('trackCustom','InstagramCTA'); }catch(_){}
-    try{ if(typeof window.gtag==='function') window.gtag('event','instagram_click'); }catch(_){}
-  });
-
   /* galeri: yatay kaydırma şeridi (sabitleme yok), oklar + sürükleme */
   (function(){
     var track=document.querySelector('.gallery-track');if(!track) return;
