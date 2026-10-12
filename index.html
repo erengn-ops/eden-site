@@ -63,7 +63,10 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
  "@context": "https://schema.org",
  "@graph": [
   {
-   "@type": "Florist",
+   "@type": [
+    "Florist",
+    "LocalBusiness"
+   ],
    "@id": "https://edenfloralart.com/#business",
    "name": "Eden Floral Art",
    "description": "Elde hazırlanan dev kağıt, tül ve krapon çiçekler: doğum odası süsleme, nişan ve düğün dekoru, organizasyon firmalarına özel tasarım, vitrin tasarımı ve çiçek lambader.",
@@ -75,11 +78,29 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
     "height": 180
    },
    "image": "https://edenfloralart.com/images/og.jpg",
-   "areaServed": {
-    "@type": "Country",
-    "name": "Türkiye",
-    "identifier": "TR"
-   },
+   "areaServed": [
+    {
+     "@type": "City",
+     "name": "İstanbul",
+     "containedInPlace": {
+      "@type": "Country",
+      "name": "Türkiye"
+     }
+    },
+    {
+     "@type": "City",
+     "name": "İzmir",
+     "containedInPlace": {
+      "@type": "Country",
+      "name": "Türkiye"
+     }
+    },
+    {
+     "@type": "Country",
+     "name": "Türkiye",
+     "identifier": "TR"
+    }
+   ],
    "knowsAbout": [
     "dev çiçek",
     "dev kağıt çiçek",
@@ -97,7 +118,55 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
    "sameAs": [
     "https://www.instagram.com/eden.floralart/",
     "https://www.shopier.com/edenfloralart"
-   ]
+   ],
+   "founder": [
+    {
+     "@type": "Person",
+     "name": "Elif"
+    },
+    {
+     "@type": "Person",
+     "name": "Seren"
+    }
+   ],
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Eden Floral Art hizmetleri",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Doğum odası süsü ve hastane odası süsleme",
+       "url": "https://edenfloralart.com/dogum-odasi-susu/"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Nişan, söz, kına ve düğün süsleme",
+       "url": "https://edenfloralart.com/nisan-susleme/"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Vitrin süsleme ve vitrin çiçek dekoru",
+       "url": "https://edenfloralart.com/vitrin-tasarimi/"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Organizasyon firmaları için dev çiçek dekoru",
+       "url": "https://edenfloralart.com/organizasyon/"
+      }
+     }
+    ]
+   }
   },
   {
    "@type": "WebSite",
@@ -206,6 +275,22 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
    "acceptedAnswer": {
     "@type": "Answer",
     "text": "İkisi de mümkün: çiçekler satın alınabilir ya da kiralanabilir (dev çiçek kiralama). Lambaderler gibi hazır modeller için Shopier mağazamıza da göz atabilirsiniz."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "İstanbul ve İzmir'de yerinde kurulum yapıyor musunuz?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yerinde kurulum genellikle İstanbul ve İzmir'de yapılabiliyor. Etkinlik ya da mekân bilginizi DM'den yazın, birlikte netleştirelim. Diğer şehirlere çiçekler kargoyla gönderiliyor."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Dev kağıt çiçek ile tül ve organze çiçek arasındaki fark nedir?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Dev kağıt çiçekler krapon (krepon kağıdı) ile, diğerleri tül ve organze kumaşla elde hazırlanır. Krapon güneşten etkilenebilir; tül ve organze etkilenmez. Hepsi aynı kompozisyonda birlikte kullanılabilir."
    }
   }
  ]
@@ -383,7 +468,7 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
     </header>
     <div class="gallery-track" tabindex="0" aria-label="Galeri, yana kaydırılabilir">
       <figure class="g-item"><img loading="lazy" src="images/dogum-odasi.webp" width="480" height="640" alt="Doğum odası kapısı önünde dev çiçek aranjmanı"><figcaption><b>Doğum odası</b> Tül ve krapon aranjman</figcaption></figure>
-      <figure class="g-item"><img loading="lazy" src="images/nisan-sari-dev-cicekler.webp" width="896" height="1194" alt="Beyaz bahçe kapısı önünde sarı dev çiçekler taşıyan kişi"><figcaption><b>Nişan</b> Sarı-beyaz dev çiçekler</figcaption></figure>
+      <figure class="g-item"><img loading="lazy" src="images/nisan-sari-dev-cicekler-1000.webp" width="750" height="1000" alt="Beyaz bahçe kapısı önünde sarı dev çiçekler taşıyan kişi"><figcaption><b>Nişan</b> Sarı-beyaz dev çiçekler</figcaption></figure>
       <figure class="g-item"><img loading="lazy" src="images/vitrin-ginza-karahindiba-lilyum.webp" width="750" height="1000" alt="Mücevher mağazası köşesinde dev karahindiba ve beyaz lilyumlar"><figcaption><b>Vitrin</b> Karahindiba ve lilyum köşe dekoru</figcaption></figure>
       <figure class="g-item wide"><img loading="lazy" src="images/lilyum-dugun.webp" width="553" height="640" alt="Tekirdağ'daki düğünde gelin-damat yolunda dev lilyumlar"><figcaption><b>Düğün</b> Gelin-damat yolu, lilyum seti</figcaption></figure>
       <figure class="g-item"><img loading="lazy" src="images/vitrin-birelin-tul-cicek.webp" width="750" height="1000" alt="Mağaza vitrininde ışıklı ekranın yanında beyaz tül çiçekler"><figcaption><b>Vitrin</b> Tül çiçekler, BIRELIN</figcaption></figure>
@@ -408,7 +493,7 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
   <!-- Not: yalnızca Instagram paylaşımlarından alınan gerçek bilgiler. Marka/müşteri adlarının (BIRELIN, @ginzadesignjewelry, @zumicoevent) anılmasına izin verildi. TODO (sahibi): "Yorumlar" öne çıkanlarından gerçek müşteri yorumları eklenebilir. -->
   <div class="refs-grid">
     <article class="ref rv">
-      <figure class="ref-img"><img loading="lazy" src="images/vitrin-birelin-couture.webp" width="1500" height="2000" alt="BIRELIN Nişantaşı vitrininde mavi elbise ve ışıklı dev beyaz çiçek"></figure>
+      <figure class="ref-img"><img loading="lazy" src="images/vitrin-birelin-couture-1000.webp" width="750" height="1000" alt="BIRELIN Nişantaşı vitrininde mavi elbise ve ışıklı dev beyaz çiçek"></figure>
       <span class="num">Vitrin</span>
       <h3>BIRELIN Nişantaşı</h3>
       <p>Mağaza vitrini için ışıklı, tül ve organze dev çiçek dekoru. Kendi işimiz diye demiyoruz, gerçekten çok beğendik.</p>
@@ -467,6 +552,10 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
 <p>Krapon (kağıt) çiçekler güneşten etkilenebilir; bu yüzden doğrudan güneş ışığından uzak tutulmalıdır. Tozları hafif nemli bir bezle alınabilir. Tül ve organze gibi diğer kumaşlar güneşten zarar görmez.</p>
 <h3>Kiralama veya satın alma</h3>
 <p>Çiçeklerimizi satın alabilir ya da kiralayabilirsiniz; dev çiçek kiralama etkinlik ve organizasyon firmaları için de uygundur. Boyutlar tasarıma göre büyük ölçüde değişir; her çiçek kişiye ve mekâna özel ölçülendirilir.</p>
+<h3>İstanbul, İzmir ve Türkiye geneli</h3>
+<p>Yerinde kurulum genellikle İstanbul ve İzmir'de yapılabiliyor; Türkiye'nin diğer şehirlerine çiçekler paketlenip kargoyla gönderiliyor. Kargo en fazla 3–4 gündür, ücret paketin boyutuna göre değişir.</p>
+<h3>Rehberler</h3>
+<p>Karar verirken yardımcı olacak yazılarımız: <a href="rehber/dogum-odasi-susu-nasil-secilir/">Doğum odası süsü nasıl seçilir?</a> ve <a href="rehber/dev-kagit-cicek-bakimi/">Dev kağıt çiçek bakımı</a>. Tümü için <a href="rehber/">Rehber</a> sayfasına göz atın.</p>
 </section>
 
 <!-- SSS -->
@@ -500,6 +589,12 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
     </details>
     <details class="rv"><summary>Çiçekleri satın mı alıyorum, kiralıyor muyum?</summary>
       <div><p>İkisi de mümkün: çiçekler satın alınabilir ya da kiralanabilir (dev çiçek kiralama). Lambaderler gibi hazır modeller için Shopier mağazamıza da göz atabilirsiniz.</p></div>
+    </details>
+    <details class="rv"><summary>İstanbul ve İzmir'de yerinde kurulum yapıyor musunuz?</summary>
+      <div><p>Yerinde kurulum genellikle İstanbul ve İzmir'de yapılabiliyor. Etkinlik ya da mekân bilginizi DM'den yazın, birlikte netleştirelim. Diğer şehirlere çiçekler kargoyla gönderiliyor.</p></div>
+    </details>
+    <details class="rv"><summary>Dev kağıt çiçek ile tül ve organze çiçek arasındaki fark nedir?</summary>
+      <div><p>Dev kağıt çiçekler krapon (krepon kağıdı) ile, diğerleri tül ve organze kumaşla elde hazırlanır. Krapon güneşten etkilenebilir; tül ve organze etkilenmez. Hepsi aynı kompozisyonda birlikte kullanılabilir.</p></div>
     </details>
   </div>
 </section>
@@ -561,6 +656,7 @@ gtag('config','G-XXXX');  /* TODO: GA4 kimliği G-XXXX (isteğe bağlı) */
       <a class="link-u" href="vitrin-tasarimi/">Vitrin tasarımı</a>
       <a class="link-u" href="organizasyon/">Organizasyon</a>
       <a class="link-u" href="sosyal-medya/">Sosyal medya</a>
+      <a class="link-u" href="rehber/">Rehber</a>
       <a class="link-u" href="https://www.instagram.com/eden.floralart/" target="_blank" rel="noopener">Instagram</a>
       <a class="link-u" href="https://www.shopier.com/edenfloralart" target="_blank" rel="noopener">Shopier</a>
       <a class="link-u" href="https://maps.app.goo.gl/ew2hRniWmJs75cL78" target="_blank" rel="noopener">Atölye (harita)</a>

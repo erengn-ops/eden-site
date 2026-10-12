@@ -1,6 +1,6 @@
 # Eden Floral Art - SEO Rehberi
 
-Son güncelleme: 12 Ekim 2026. Alan adı: https://edenfloralart.com (GitHub Pages).
+Son güncelleme: 12 Ekim 2026 (seo-deep dalı). Alan adı: https://edenfloralart.com (GitHub Pages).
 
 ## 1. Anahtar kelime haritası
 
@@ -81,3 +81,32 @@ Henüz oluşturulmadı; öneriler:
 - Sitedeki görsel kalitesi eski olan dosyalar (README'de listeli) yenilendiğinde LCP ve görsel arama için kazanç.
 - Search Console verisi gelince title/description'ları tıklama oranına göre ayarlayın.
 - İç link: ana sayfa hizmet kartları ve landing sayfaların "Diğer hizmetler" bağlantıları zaten karşılıklı; `/sosyal-medya/` sayfası yayında olunca ona da link verin.
+
+## 7. seo-deep dalı: ikinci tur (12 Ekim 2026)
+
+Denetim sonucu: tüm sayfalarda tek H1, başlık hiyerarşisi, canonical, hreflang tr + x-default, OG/Twitter, JSON-LD (hepsi JSON olarak ayrıştırılıyor) ve görsel alt/width/height zaten doğruydu; FAQPage metinleri görünür SSS ile birebir eşleşiyor (betikle doğrulandı). 404 `noindex`, robots/sitemap sağlam.
+
+Yapılanlar:
+
+- **Dört hizmet sayfası + ana sayfa**: ek içerik bölümleri (kapı süsü / bebek karşılama süsü ayrımı, seçim kriterleri, zaman çizelgesi, bakım, İstanbul-İzmir kurulum ve Türkiye geneli kargo; nişanda "dev kağıt çiçek arka fon" malzeme farkı; vitrinde güneş alan vitrin ve kiralama; organizasyonda satış/kiralama ve takvim). Her sayfaya 4-5 yeni SSS (ana sayfaya 2) eklendi; görünür SSS ve FAQPage JSON-LD birlikte güncellendi.
+- **Yerel SEO / JSON-LD**: Florist düğümü artık `["Florist","LocalBusiness"]`, `areaServed` İstanbul + İzmir (City) + Türkiye (Country), `founder` Elif ve Seren (yalnız ad), `hasOfferCatalog` (dört hizmet sayfası). Service düğümlerinde aynı `areaServed`. Adres, telefon, puan yok.
+- **Rehber**: `/rehber/` (CollectionPage + ItemList), `/rehber/dogum-odasi-susu-nasil-secilir/` ve `/rehber/dev-kagit-cicek-bakimi/` (Article + BreadcrumbList, yalnız onaylı bilgiler). Hizmet sayfalarından, ana sayfadan ve tüm footer'lardan bağlantı; üst menüde yalnız rehber sayfalarında "Rehber" var. Sitemap'e üç URL eklendi. Yeni CSS `.guide-*`, `.prose-fig` (assets/style.css sonu).
+- **/sosyal-medya/**: description 177 → 131 karakter; JSON-LD `@graph` (WebPage + BreadcrumbList + WebSite + Florist) ve areaServed.
+- **Performans**: ilk ekranda olmayan büyük görseller 1500px yerine 1000 sürümüne alındı (ana sayfa BIRELIN referans, vitrin SPRING, nişan sarı çiçekler); hero preload/fetchpriority, font `display=swap` + bloklamayan yükleme, `defer` JS zaten vardı. Yeni rehber sayfaları gsap/lenis yüklemez (hafif).
+- Dokunulmayanlar: `data/instagram.json`, `images/ig/`.
+
+Emin olunmayan / sahibinin kontrol etmesi gerekenler:
+
+- Kiralama koşulları (süre, iade, depozito) sitede hiçbir yerde yazılmadı; "koşulları sipariş sırasında birlikte netleştiririz" denildi.
+- "Hastane kuralları için hastaneye sorun" tavsiyesi genel öneri; doğrulayın.
+- Rehberlerdeki "bezi sıkıp yüzeye dokunun" gibi küçük bakım ipuçları genel mantıktır; sahibi onaylamalı.
+- Rehber yazarı Organization (Eden Floral Art) olarak işaretli; kişi adı yok.
+
+### Sahibinin kendisi yapacakları (site dışı)
+
+1. **Google İşletme Profili** oluşturun (bkz. bölüm 5): hizmet alanı işletmesi, adres gizli, hizmet bölgeleri İstanbul ve İzmir, web sitesi `https://edenfloralart.com/`.
+2. **Search Console**: mülkü doğrulayın, `https://edenfloralart.com/sitemap.xml` gönderin, yeni URL'leri (/rehber/ dahil) "Dizine eklenmesini iste" ile denetleyin; Bing Webmaster'a içe aktarın.
+3. **Backlink**: BIRELIN ve @zumicoevent'ten kendi sitelerinde / Instagram biyografilerinde Eden Floral Art'a bağlantı isteyin (marka adı + `https://edenfloralart.com/`); ginza için de aynı izin alınıp sorulabilir.
+4. **Google yorumu**: memnun müşterilerden İşletme Profili'nde gerçek yorum isteyin (sahte/teşvikli yorum yok).
+5. **Instagram biyografi bağlantısı**: `https://edenfloralart.com/` (isterseniz `?utm_source=instagram`); vurgulanan gönderilere ilgili sayfa bağlantısı ekleyin.
+6. Yayından 2-4 hafta sonra Search Console Performans raporuna bakıp title/description'ları tıklama oranına göre ayarlayın.
