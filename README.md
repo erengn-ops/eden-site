@@ -53,11 +53,14 @@ Güncellemek için dosyaları değiştirip `git commit` + `git push` yeterlidir.
 
 ## Sahibinin onaylaması gereken noktalar (HTML içinde `TODO` yorumları)
 
-- Sipariş için önerilen minimum süre (SSS 1)
-- Kargo süresi/ücreti ve yerinde kurulum yapılan şehirler (SSS 2)
-- Organizasyon firmalarına toptan fiyat / iş ortaklığı koşulları (hizmet kartı 03 ve SSS 4)
-- Satış mı kiralama mı seçeneği (SSS 6)
-- Referans bölümünde @zumicoevent ve @ginzadesignjewelry adlarının anılmasına izin (paylaşımlardan alındı)
+Onaylananlar (12 Ekim 2026): sipariş zamanı (genellikle 2–3 hafta önce), kargo (Türkiye geneli, en fazla 3–4 gün, ücret paket boyutuna göre), boyut (tasarıma göre değişir), satış ve kiralama (ikisi de), organizasyon firmaları için kiralama veya satın alma, BIRELIN / @ginzadesignjewelry / @zumicoevent adlarının anılma izni.
+
+Açık kalanlar:
+
+- Yerinde kurulum yapılan şehirler
+- Bakım/saklama önerisi ve tekrar kullanım ayrıntıları
+- Organizasyon firmalarına toptan / düzenli sipariş koşulları, sözleşme ve ödeme (kiralama/satın alma modeli dışında)
+- Vitrin sezonluk yenileme seçenekleri
 - "Yorumlar" öne çıkanlarındaki gerçek müşteri yorumları okunamadı; eklenmedi. İsterseniz referans bölümüne eklenebilir.
 - Fiyat veya teslim günü yazılmadı. Lambader indirim kodu (YAZ10) süreli olduğu için eklenmedi.
 

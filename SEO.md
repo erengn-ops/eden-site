@@ -8,13 +8,15 @@ Not: Arama hacmi verisi (Search Console / Google Ads Keyword Planner) elde yok; 
 
 | Sayfa | Birincil anahtar kelime | İkincil / uzun kuyruk | Not |
 |---|---|---|---|
-| `/` | dev çiçek | dev kağıt çiçek, el yapımı dev çiçek, tül krapon organze çiçek, çiçek lambader, Eden Floral Art | Marka + kategori sayfası; alt sayfalara iç link |
-| `/dogum-odasi-susu/` | doğum odası süsü | hastane odası süsleme, hastane kapı süsü, bebek karşılama süsü, doğum odası kapı süsü, dev çiçek aranjmanı | Rekabet: hazır kapı süsü ürün sayfaları; fark: dev, el yapımı |
-| `/nisan-susleme/` | nişan süsleme | nişan süsü, söz süsleme, kına süsü, düğün çiçek dekoru, flower backdrop, çiçek fon, gelin-damat yolu çiçek, takı töreni arka fon | |
-| `/vitrin-tasarimi/` | vitrin süsleme | vitrin çiçek dekoru, mağaza vitrin tasarımı, vitrin dekorasyonu, mağaza köşe dekoru, ışıklı çiçek vitrin | B2B / mağaza sahibi niyeti |
-| `/organizasyon/` | organizasyon çiçek dekoru | organizasyon firmalarına dev çiçek, flower backdrop organizasyon, etkinlik çiçek dekoru, konsepte özel çiçek tasarımı | B2B |
+| `/` | dev çiçek | dev çiçek kiralama, dev kağıt çiçek, el yapımı dev çiçek, tül krapon organze çiçek, çiçek lambader, Eden Floral Art | Marka + kategori sayfası; alt sayfalara iç link |
+| `/dogum-odasi-susu/` | doğum odası süsü | dev çiçek kiralama (metinde), hastane odası süsleme, hastane kapı süsü, bebek karşılama süsü, doğum odası kapı süsü, dev çiçek aranjmanı | Rekabet: hazır kapı süsü ürün sayfaları; fark: dev, el yapımı |
+| `/nisan-susleme/` | nişan süsleme | dev çiçek kiralama, nişan süsü, söz süsleme, kına süsü, düğün çiçek dekoru, flower backdrop, çiçek fon, gelin-damat yolu çiçek, takı töreni arka fon | |
+| `/vitrin-tasarimi/` | vitrin süsleme | dev çiçek kiralama, vitrin çiçek dekoru, mağaza vitrin tasarımı, vitrin dekorasyonu, mağaza köşe dekoru, ışıklı çiçek vitrin | B2B / mağaza sahibi niyeti |
+| `/organizasyon/` | organizasyon çiçek dekoru | dev çiçek kiralama, organizasyon firmalarına dev çiçek, flower backdrop organizasyon, etkinlik çiçek dekoru, konsepte özel çiçek tasarımı | B2B |
 | `/sosyal-medya/` | (ana dal sayfası, diğer ajan ekliyor) | Eden Floral Art Instagram, @eden.floralart | Sitemap'e eklendi; sayfa ana dalda yayınlanınca title/description/canonical/JSON-LD eklenmeli |
 | Lambader (Shopier) | dev çiçek lambader | organze lambader, çiçek masa lambası | Site içinde ayrı sayfa yok; ana sayfada anılıyor. Ayrı sayfa açılırsa bu kelimeler için en iyi aday |
+
+Satış ve kiralama ikisi de mevcut (sahibi onayladı, 12 Ekim 2026): "dev çiçek kiralama" ana sayfa, nişan, vitrin ve organizasyon sayfalarında "Kiralama veya satın alma" bölümü/SSS ile geçer; nişan, vitrin ve organizasyon meta description'larına da sığdığı yerde eklendi.
 
 Kelime kullanım ilkesi: birincil kelime title, H1, meta description ve ilk paragrafta; ikincil kelimeler H2/H3 ve metin içinde doğal biçimde. Başlık/metin şişirilmedi.
 
@@ -31,13 +33,14 @@ Kelime kullanım ilkesi: birincil kelime title, H1, meta description ve ilk para
 
 ## 3. Sahibinin onaylaması gereken noktalar (HTML'de `TODO` yorumu)
 
-- Önerilen minimum sipariş süresi (hafta), kargo süresi/ücreti, yerinde kurulum yapılan şehirler.
-- Standart boyut aralıkları (cm) ve set içeriği (doğum odası ve nişan sayfaları).
+Onaylananlar (12 Ekim 2026): sipariş zamanı (genellikle 2–3 hafta önce), kargo (Türkiye geneli, en fazla 3–4 gün, ücret paket boyutuna göre), boyut (tasarıma göre değişir, kişiye/mekâna özel), satış ve kiralama (ikisi de), organizasyon firmaları için kiralama veya satın alma, BIRELIN / @ginzadesignjewelry / @zumicoevent adlarının anılma izni.
+
+Hâlâ açık:
+
+- Yerinde kurulum yapılan şehirler.
 - Bakım/saklama önerisi ve tekrar kullanım ("solmaz, tozdan ve nemden uzak saklayın" gibi genel öneriler yazıldı; onaylayın).
-- Satış mı kiralama mı (SSS).
-- Organizasyon firmalarına toptan/düzenli sipariş koşulları, iş ortaklığı süreci.
+- Organizasyon firmalarına toptan/düzenli sipariş koşulları (kiralama veya satın alma modeliyle çalışıldığı onaylandı).
 - Vitrin sezonluk yenileme / şehir dışı montaj.
-- Metinlerde BIRELIN, @ginzadesignjewelry, @zumicoevent adlarının anılma izni.
 - Adres/telefon eklenirse JSON-LD `address` / `telephone` alanları eklenmeli (şimdilik yok).
 
 ## 4. Google Search Console ve Bing Webmaster Tools (HTML etiketi yöntemi)
