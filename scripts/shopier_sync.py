@@ -34,11 +34,16 @@ DATA = ROOT / "data" / "shopier.json"
 IMG_DIR = ROOT / "images" / "shop"
 MAX_EDGE = 900
 STRIP_COUNT = 6
-UA = "Mozilla/5.0 (compatible; EdenSiteSync/1.0; +https://edenfloralart.com/)"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "tr-TR,tr;q=0.9,en;q=0.8",
+}
 
 
 def fetch(url, binary=False):
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    req = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(req, timeout=40) as r:
         data = r.read()
     return data if binary else data.decode("utf-8", "replace")
