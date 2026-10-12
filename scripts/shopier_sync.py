@@ -133,8 +133,8 @@ def short(s, n):
 
 
 def card(p, prefix, lazy=True):
-    sold_out = p["stock"] == 0
-    badge = "Tükendi" if sold_out else (p["badge"] or ("Son ürün" if p["stock"] == 1 else ""))
+    sold_out = False  # siparişe göre üretim: stok/tükendi gösterilmiyor
+    badge = p["badge"]
     badge_html = f'<span class="shop-badge">{esc(badge)}</span>' if badge else ""
     btn = (
         '<span class="shop-btn is-off">Tükendi</span>' if sold_out else
@@ -161,7 +161,7 @@ def ld_json(products):
             "@type": "Offer",
             "url": p["url"],
             "priceCurrency": "TRY",
-            "availability": "https://schema.org/" + ("OutOfStock" if p["stock"] == 0 else "InStock"),
+            "availability": "https://schema.org/MadeToOrder",
             "seller": {"@id": "https://edenfloralart.com/#business"},
         }
         if p["price"]:
@@ -240,8 +240,7 @@ def main():
     grid = "\n".join(card(p, "../") for p in clean)
     replace_block(ROOT / "magaza" / "index.html", "SHOPIER:GRID", grid)
     replace_block(ROOT / "magaza" / "index.html", "SHOPIER:LD", ld_json(clean))
-    in_stock = [p for p in clean if p["stock"] != 0][:STRIP_COUNT]
-    replace_block(ROOT / "index.html", "SHOPIER:STRIP", "\n".join(card(p, "") for p in in_stock))
+    replace_block(ROOT / "index.html", "SHOPIER:STRIP", "\n".join(card(p, "") for p in clean[:STRIP_COUNT]))
     print(f"{len(clean)} ürün yazıldı.")
 
 
