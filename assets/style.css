@@ -83,7 +83,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.02;letter-spacin
 
 /* marquee */
 .marquee{overflow:hidden;border-block:1px solid var(--line);background:var(--paper);padding:1rem 0;white-space:nowrap}
-.marquee-track{display:inline-flex;gap:2.2rem;animation:slide 38s linear infinite;font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--ink-2);will-change:transform}
+.marquee-track{display:flex;width:max-content;animation:slide 60s linear infinite;font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--ink-2);will-change:transform}
+.marquee-group{display:flex;flex:none;gap:2.2rem;padding-right:2.2rem}
 .marquee-track b{color:var(--coral);font-weight:400;font-style:normal}
 @keyframes slide{to{transform:translateX(-50%)}}
 
