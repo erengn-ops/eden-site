@@ -513,4 +513,11 @@ html.lb-open,html.lb-open body{overflow:hidden}
 .shop-card.is-sold .shop-img img{opacity:.55}
 .shop-foot{margin-top:clamp(28px,4vw,48px);display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px}
 .shop-foot p{font-size:.88rem;color:var(--ink-2);max-width:44ch}
-.shop-hero .hero-copy{max-width:760px}
+.shop-page{padding-top:clamp(100px,13vw,140px)}
+.shop-head{display:grid;gap:14px 40px;align-items:end;margin-bottom:clamp(22px,3.5vw,40px)}
+.shop-head h1{font-size:clamp(2.4rem,6vw,4.2rem)}
+.shop-head .eyebrow{margin-bottom:.8rem}
+.shop-head-side{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.shop-head-side p{font-size:.95rem;color:var(--ink-2);max-width:52ch}
+@media (min-width:860px){.shop-head{grid-template-columns:auto 1fr}.shop-head-side{align-items:flex-end;text-align:right}.shop-head-side p{margin-left:auto}}
+.shop-head h1 em{color:var(--coral)}
