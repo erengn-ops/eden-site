@@ -15,7 +15,11 @@
     'sakayik':['Şakayık','şakayıklar'],
     'lilyum':['Lilyum','lilyumlar'],
     'ayakli':['Ayaklı çiçek','ayaklı çiçekler'],
-    'kompozisyon':['Kompozisyon','kompozisyonlar']
+    'kompozisyon':['Kompozisyon','kompozisyonlar'],
+    'magaza':['Mağaza içi','mağaza içi işler'],
+    'masa':['Masa lambası','masa lambaları'],
+    'gul':['Gül','güller'],
+    'gelincik':['Gelincik','gelincikler']
   };
   function label(t,i){return (LABELS[t]||[t,t])[i];}
 

@@ -527,3 +527,14 @@ html.lb-open,html.lb-open body{overflow:hidden}
 .shop-foot{margin-top:clamp(40px,6vw,72px);padding-top:clamp(28px,4vw,40px);border-top:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px}
 .shop-foot p{color:var(--ink-2);max-width:52ch}
 .shop-strip .sec-head{margin-bottom:clamp(26px,4vw,44px)}
+
+/* İşlerimiz */
+.shop-filter button span{opacity:.55;font-size:.72rem;margin-left:2px}
+.works-grid{columns:2;column-gap:clamp(12px,2vw,24px)}
+@media (min-width:760px){.works-grid{columns:3}}
+@media (min-width:1180px){.works-grid{columns:4}}
+.work-item{break-inside:avoid;margin:0 0 clamp(14px,2.4vw,30px)}
+.work-item[hidden]{display:none}
+.work-item img{width:100%;height:auto;border-radius:4px;background:var(--blush)}
+.work-item figcaption{margin-top:8px;font-size:.84rem;color:var(--ink-2);line-height:1.4}
+.work-item figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:1.2rem;color:var(--ink)}
