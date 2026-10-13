@@ -1,0 +1,36 @@
+name: Instagram arşivi (galeri seçimi için)
+
+# Yalnız elle çalışır; sonuç ana siteye değil `ig-archive` dalına yazılır.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pillow
+
+      - name: Arşivi indir
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ vars.IG_USER_ID }}
+        run: python scripts/ig_archive.py
+
+      - name: ig-archive dalına yaz
+        run: |
+          git config user.name "eden-instagram-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan ig-archive
+          git rm -rq --cached .
+          git add archive
+          git commit -qm "Instagram arşivi"
+          git push -f origin ig-archive
