@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15T19:54:37+00:00",
+  "updated": "2026-10-16T13:18:34+00:00",
   "profile": {
     "username": "eden.floralart",
     "bio": [
@@ -11,6 +11,16 @@
     "avatar": "/images/ig/avatar.webp"
   },
   "posts": [
+    {
+      "id": "18094390616161582",
+      "permalink": "https://www.instagram.com/p/DejOfgDo172/",
+      "type": "IMAGE",
+      "caption": "Yerini buldu. 🌺🌸\n\nİstanbul ve Kasım 15 sonrası İzmir , Balıkesir kiralık müsaitlik tarihleri için dönüşlerinizi bekliyoruz 🙏🏼",
+      "image": "/images/ig/18094390616161582.webp",
+      "w": 826,
+      "h": 1080,
+      "timestamp": "2026-10-16T09:39:31+0000"
+    },
     {
       "id": "18643778665045151",
       "permalink": "https://www.instagram.com/p/Degv8UYCI6F/",
@@ -240,16 +250,6 @@
       "w": 810,
       "h": 1080,
       "timestamp": "2026-09-07T09:34:00+0000"
-    },
-    {
-      "id": "18093573188411311",
-      "permalink": "https://www.instagram.com/reel/Dc5sAKEAL1c/",
-      "type": "VIDEO",
-      "caption": "Ribbon Flower Decor",
-      "image": "/images/ig/18093573188411311.webp",
-      "w": 608,
-      "h": 1080,
-      "timestamp": "2026-09-05T10:06:05+0000"
     }
   ]
 }
