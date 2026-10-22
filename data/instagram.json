@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T13:52:33+00:00",
+  "updated": "2026-10-22T13:51:27+00:00",
   "profile": {
     "username": "eden.floralart",
     "bio": [
@@ -11,6 +11,16 @@
     "avatar": "/images/ig/avatar.webp"
   },
   "posts": [
+    {
+      "id": "18060011660800867",
+      "permalink": "https://www.instagram.com/p/DeyrFBGiE3G/",
+      "type": "CAROUSEL_ALBUM",
+      "caption": "Çok sevdiniz 🤍 Biz de size karahindiba yapmaktan çok keyif alıyoruz. Hatta belki başka renkler de yaparız neden olmasın 🤩🫠",
+      "image": "/images/ig/18060011660800867.webp",
+      "w": 810,
+      "h": 1080,
+      "timestamp": "2026-10-22T09:34:58+0000"
+    },
     {
       "id": "17880700401543898",
       "permalink": "https://www.instagram.com/p/DewBI_4CBL6/",
@@ -240,16 +250,6 @@
       "w": 608,
       "h": 1080,
       "timestamp": "2026-09-11T08:22:21+0000"
-    },
-    {
-      "id": "17907211092493553",
-      "permalink": "https://www.instagram.com/p/DdD8NNlCDko/",
-      "type": "CAROUSEL_ALBUM",
-      "caption": "POLIN lambader 🧚🏻",
-      "image": "/images/ig/17907211092493553.webp",
-      "w": 810,
-      "h": 1080,
-      "timestamp": "2026-09-09T09:28:56+0000"
     }
   ]
 }
