@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22T13:51:27+00:00",
+  "updated": "2026-10-23T13:31:26+00:00",
   "profile": {
     "username": "eden.floralart",
     "bio": [
@@ -11,6 +11,16 @@
     "avatar": "/images/ig/avatar.webp"
   },
   "posts": [
+    {
+      "id": "18121651172280003",
+      "permalink": "https://www.instagram.com/reel/De1WtYYIiwd/",
+      "type": "VIDEO",
+      "caption": "Eden Floral Art farkıyla hazırladığımız çiçek dekorumuz. 🌸🌺\nRenkler, çiçek türleri hepsi özenle seçilip hazırlandı. \nGelin bir de yakın çekim bakalım🧚🏻",
+      "image": "/images/ig/18121651172280003.webp",
+      "w": 607,
+      "h": 1080,
+      "timestamp": "2026-10-23T10:39:01+0000"
+    },
     {
       "id": "18060011660800867",
       "permalink": "https://www.instagram.com/p/DeyrFBGiE3G/",
@@ -240,16 +250,6 @@
       "w": 810,
       "h": 1080,
       "timestamp": "2026-09-14T09:13:21+0000"
-    },
-    {
-      "id": "18111586232012641",
-      "permalink": "https://www.instagram.com/reel/DdI919_ovdg/",
-      "type": "VIDEO",
-      "caption": "Laaaleler laleler laleler diye giriş yapmak istedim. Buyrun Organze kumaş lalelerimiz 🫠🤩",
-      "image": "/images/ig/18111586232012641.webp",
-      "w": 608,
-      "h": 1080,
-      "timestamp": "2026-09-11T08:22:21+0000"
     }
   ]
 }
