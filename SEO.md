@@ -14,7 +14,7 @@ Not: Arama hacmi verisi (Search Console / Google Ads Keyword Planner) elde yok; 
 | `/vitrin-tasarimi/` | vitrin süsleme | dev çiçek kiralama, vitrin çiçek dekoru, mağaza vitrin tasarımı, vitrin dekorasyonu, mağaza köşe dekoru, ışıklı çiçek vitrin | B2B / mağaza sahibi niyeti |
 | `/organizasyon/` | organizasyon çiçek dekoru | dev çiçek kiralama, organizasyon firmalarına dev çiçek, flower backdrop organizasyon, etkinlik çiçek dekoru, konsepte özel çiçek tasarımı | B2B |
 | `/sosyal-medya/` | (ana dal sayfası, diğer ajan ekliyor) | Eden Floral Art Instagram, @eden.floralart | Sitemap'e eklendi; sayfa ana dalda yayınlanınca title/description/canonical/JSON-LD eklenmeli |
-| Lambader (Shopier) | dev çiçek lambader | organze lambader, çiçek masa lambası | Site içinde ayrı sayfa yok; ana sayfada anılıyor. Ayrı sayfa açılırsa bu kelimeler için en iyi aday |
+| `/lambader/` | dev çiçek lambader | organze lambader, çiçek masa lambası, çiçek lambader, krapon çiçek lambader | 1 Kasım 2026'da açıldı; satış yolu `/magaza/` (Shopier), özel renk DM. Fiyat sayfada yazılmaz (mağaza sayfasındaki güncel liste) |
 
 Satış ve kiralama ikisi de mevcut (sahibi onayladı, 12 Ekim 2026): "dev çiçek kiralama" ana sayfa, nişan, vitrin ve organizasyon sayfalarında "Kiralama veya satın alma" bölümü/SSS ile geçer; nişan, vitrin ve organizasyon meta description'larına da sığdığı yerde eklendi.
 
@@ -77,7 +77,7 @@ Henüz oluşturulmadı; öneriler:
 
 ## 6. Sonraki adımlar (öneri)
 
-- Lambader için ayrı bir landing sayfası (`/lambader/`): "dev çiçek lambader" kelimesi şu an yalnız ana sayfada.
+- ~~Lambader için ayrı landing sayfası~~ yapıldı (bkz. bölüm 8).
 - Sitedeki görsel kalitesi eski olan dosyalar (README'de listeli) yenilendiğinde LCP ve görsel arama için kazanç.
 - Search Console verisi gelince title/description'ları tıklama oranına göre ayarlayın.
 - İç link: ana sayfa hizmet kartları ve landing sayfaların "Diğer hizmetler" bağlantıları zaten karşılıklı; `/sosyal-medya/` sayfası yayında olunca ona da link verin.
@@ -112,3 +112,11 @@ Emin olunmayan / sahibinin kontrol etmesi gerekenler:
 6. Yayından 2-4 hafta sonra Search Console Performans raporuna bakıp title/description'ları tıklama oranına göre ayarlayın.
 
 - **Kiralama kuralı (12 Eki 2026):** Kiralama yalnız İstanbul ve İzmir'de; diğer şehirlere yalnız satın alma + kargo (3–4 gün). Tüm kiralama metinleri, meta açıklamaları ve FAQ/JSON-LD buna göre nitelendi; "dev çiçek kiralama" anahtar kelimesi "İstanbul ve İzmir'de dev çiçek kiralama" olarak korundu. Yeni kiralama cümlesi eklerken bu kuralı belirtin.
+
+## 8. `/lambader/` sayfası (1 Kasım 2026)
+
+- Title: "Dev Çiçek Lambader, Organze Lambader | Eden Floral Art" (54 kr); description 157 kr; tek H1 "Dev çiçek lambader, elde yapılır, ışıkla açar."
+- Yapı vitrin sayfasıyla aynı: hero + 4 fayda + ~270 kelimelik bilgi bölümü (nedir, malzeme, boyut, sipariş, satın alma/kiralama) + 8 görselli örnek ızgarası (Shopier ilan fotoğrafları, başlıklar ilan bağlantılı) + 10 SSS + kapanış. JSON-LD: `@graph` (Florist, WebSite, WebPage, ImageObject, BreadcrumbList, Service) + FAQPage; fiyat, puan, yorum yok. Florist `hasOfferCatalog`'a lambader eklendi (landing sayfalarının hepsinde).
+- Boyut/malzeme bilgileri sahibinin kendi Shopier ilanlarından (`data/shopier.json`): tek gövdeli Polin/Freya/Sun toplam boy 1,60–1,70 m, çiçek çapı 55 cm, esnek boru gövde + demir ayaklık, krepe kağıt; ikili Freya organze + krapon, 170/160 cm; masa lambaları EVA foam, 17–34 cm çap, 26–30 cm yükseklik.
+- İç linkler: ana sayfa (hizmet kartı + "Hangi anlar için?" listesi), tüm sayfaların footer'ı, mağaza girişi, vitrin sayfası (ışıklı organze bölümü), bakım rehberi.
+- Açık (HTML'de TODO): lambader kiralaması var mı; organze ikili modellerde de esnek gövde/demir ayaklık geçerli mi, ampul/güç/kablo bilgisi; yüksek çözünürlüklü lambader fotoğrafları (hero ve OG görseli 750–900 px kaynaktan).
