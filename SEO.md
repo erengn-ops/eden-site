@@ -120,3 +120,10 @@ Emin olunmayan / sahibinin kontrol etmesi gerekenler:
 - Boyut/malzeme bilgileri sahibinin kendi Shopier ilanlarından (`data/shopier.json`): tek gövdeli Polin/Freya/Sun toplam boy 1,60–1,70 m, çiçek çapı 55 cm, esnek boru gövde + demir ayaklık, krepe kağıt; ikili Freya organze + krapon, 170/160 cm; masa lambaları EVA foam, 17–34 cm çap, 26–30 cm yükseklik.
 - İç linkler: ana sayfa (hizmet kartı + "Hangi anlar için?" listesi), tüm sayfaların footer'ı, mağaza girişi, vitrin sayfası (ışıklı organze bölümü), bakım rehberi.
 - Sahibi yanıtladı (1 Kasım 2026): lambader kiralanmıyor, yalnız satılıyor; esnek gövde + demir ayaklık ikili organze modellerde de geçerli; klasik duy, kablo 2 m, ışık rengi müşterinin seçimi; kargo 4 iş günü; Shopier görsellerinin çözünürlüğü yeterli.
+
+## 9. GEO turu (8 Kasım 2026)
+
+- `/llms.txt` eklendi (işletme özeti, temel bilgiler, sayfa listesi; yalnız sitede zaten yazan bilgiler). Yeni sayfa eklenince güncelleyin.
+- Ana sayfa girişine görünür "Eden Floral Art nedir?" alıntılanabilir paragraf; SSS'ye "Eden Floral Art ne yapar?" ve "Dev kağıt çiçek nerede yapılır, nereden sipariş verilir?" (görünür SSS + FAQPage JSON-LD birlikte).
+- `robots.txt`: OAI-SearchBot, ChatGPT-User, PerplexityBot, Perplexity-User, Claude-SearchBot, Claude-User, Applebot açıkça izinli.
+- Rehber sayfalarında görünür "Son güncelleme" + `dateModified`. Fiyat sayfada olmadığı için "fiyatı" sorusuna ayrı sayfa açılmadı (SSS: fiyatlar boyuta/adede göre DM'den).

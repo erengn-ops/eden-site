@@ -1,4 +1,26 @@
 User-agent: *
 Allow: /
 
+# Yapay zeka arama ve asistan botlari: acikca izinli
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
 Sitemap: https://edenfloralart.com/sitemap.xml

@@ -538,3 +538,5 @@ html.lb-open,html.lb-open body{overflow:hidden}
 .work-item img{width:100%;height:auto;border-radius:4px;background:var(--blush)}
 .work-item figcaption{margin-top:8px;font-size:.84rem;color:var(--ink-2);line-height:1.4}
 .work-item figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:1.2rem;color:var(--ink)}
+.intro-fact{max-width:46rem;margin:1.6rem auto 0;text-align:center;font-size:1rem;line-height:1.7;opacity:.85}
+.guide-updated{font-size:.9rem;opacity:.7;margin-top:.6rem}
