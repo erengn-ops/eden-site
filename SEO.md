@@ -139,3 +139,9 @@ Emin olunmayan / sahibinin kontrol etmesi gerekenler:
 - İç link: beş hizmet sayfasının altına "İlgili rehberler" bloğu, iki eski rehbere ilgili liste, rehber dizini + ItemList, ana sayfa metni, tüm footer'lara "Atölye". Sitemap (lastmod güncellendi) ve llms.txt yeni sayfalarla güncellendi.
 - Denetim betiği (scratchpad): JSON-LD ayrışıyor, tek H1, canonical, sitemap, SSS görünür = JSON-LD, görsel alt/width/height, kırık/yetim link. Önceden var olan küçük uyarılar: isler title 66 kr, nisan/organizasyon description 168-170 kr.
 - Görsel SEO: mevcut sayfalarda alt/width/height/lazy zaten tamamdı; WebP kullanılıyor, yeni araç eklenmedi.
+
+## 11. Tarih dürüstlüğü (8 Kasım 2026)
+
+- Kural: `dateModified`, görünür "Son güncelleme", `article:modified_time` ve sitemap `lastmod` yalnız o sayfanın metin/veri içeriği gerçekten değiştiğinde güncellenir; footer/menü bağlantısı, "İlgili rehberler" listesi, CSS sürüm numarası ve JSON-LD katalog eklemesi tarih güncellemesi sayılmaz. `datePublished` değişmez.
+- Düzeltilen: iki eski rehberin tarihi yalnız tarih alanı değiştirilerek 8 Kasım'a çekilmişti; geri alındı (doğum odası seçim rehberi 12 Ekim, bakım rehberi 1 Kasım: lambader cümlesi). Sitemap: doğum odası 20 Ekim, nişan ve organizasyon 12 Ekim, vitrin ve lambader 1 Kasım, sosyal medya 30 Ekim (Instagram verisi), ana sayfa ve rehber dizini ile dört yeni sayfa 8 Kasım.
+- Kumaş/kağıt ve kiralama/satın alma rehberlerine karşılaştırma tablosu eklendi (içerik aynı, biçim tablo).
