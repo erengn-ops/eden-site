@@ -127,3 +127,15 @@ Emin olunmayan / sahibinin kontrol etmesi gerekenler:
 - Ana sayfa girişine görünür "Eden Floral Art nedir?" alıntılanabilir paragraf; SSS'ye "Eden Floral Art ne yapar?" ve "Dev kağıt çiçek nerede yapılır, nereden sipariş verilir?" (görünür SSS + FAQPage JSON-LD birlikte).
 - `robots.txt`: OAI-SearchBot, ChatGPT-User, PerplexityBot, Perplexity-User, Claude-SearchBot, Claude-User, Applebot açıkça izinli.
 - Rehber sayfalarında görünür "Son güncelleme" + `dateModified`. Fiyat sayfada olmadığı için "fiyatı" sorusuna ayrı sayfa açılmadı (SSS: fiyatlar boyuta/adede göre DM'den).
+
+## 10. GEO + SEO ikinci tur (8 Kasım 2026)
+
+- Google otomatik tamamlama (tr) kontrolü: "dev kağıt çiçek yapımı", "krapon kağıt çiçek yapımı", "dev çiçek kiralama", "doğum odası süsleme izmir" öneriliyor; "nişan süsleme kağıt çiçek", "kağıt çiçek kiralama" için öneri yok. Boşluklara göre dört sayfa eklendi (yalnız sitede/SEO.md'de yazan bilgilerle, fiyatsız):
+  - `/rehber/dev-kagit-cicek-nedir/` (nedir, malzeme, atölyede yapılış; "kendin yap tarifi değildir" notu)
+  - `/rehber/kagit-cicek-mi-kumas-cicek-mi/` (krapon/tül/organze, güneş farkı)
+  - `/rehber/dev-cicek-kiralama-mi-satin-alma-mi/` (kiralama yalnız İstanbul ve İzmir; lambader kiralanmaz)
+  - `/atolye/` (E-E-A-T: Elif ve Seren, dört adımlı sipariş, örnek işler; HowTo + AboutPage)
+- Her sayfada: cevap-önce lead, görünür SSS + FAQPage (aynı veriden üretilir), BreadcrumbList + görünür breadcrumb, ImageObject, Florist düğümü (ana sayfayla aynı), Article (rehberler), "İlgili sayfalar" ve "Hizmetlerimiz" bağlantıları.
+- İç link: beş hizmet sayfasının altına "İlgili rehberler" bloğu, iki eski rehbere ilgili liste, rehber dizini + ItemList, ana sayfa metni, tüm footer'lara "Atölye". Sitemap (lastmod güncellendi) ve llms.txt yeni sayfalarla güncellendi.
+- Denetim betiği (scratchpad): JSON-LD ayrışıyor, tek H1, canonical, sitemap, SSS görünür = JSON-LD, görsel alt/width/height, kırık/yetim link. Önceden var olan küçük uyarılar: isler title 66 kr, nisan/organizasyon description 168-170 kr.
+- Görsel SEO: mevcut sayfalarda alt/width/height/lazy zaten tamamdı; WebP kullanılıyor, yeni araç eklenmedi.
