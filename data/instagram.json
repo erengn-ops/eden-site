@@ -1,16 +1,26 @@
 {
-  "updated": "2026-10-30T15:05:24+00:00",
+  "updated": "2026-11-18T17:18:23+00:00",
   "profile": {
     "username": "eden.floralart",
     "bio": [
       "EDEN FLORAL ART",
       "DEV ÇİÇEK TASARIMLARI",
       "VİTRİN TASARIM VE DİZAYN",
-      "İSTANBUL 🔜 İZMİR"
+      "İZMİR"
     ],
     "avatar": "/images/ig/avatar.webp"
   },
   "posts": [
+    {
+      "id": "18028461296876395",
+      "permalink": "https://www.instagram.com/p/Df4I9_AiFHP/",
+      "type": "CAROUSEL_ALBUM",
+      "caption": "Armine öğretmenler günü özel çekim için hazırladığımız çiçekler 🌺🤗 Daha fazlası için @armine 🙏🏼",
+      "image": "/images/ig/18028461296876395.webp",
+      "w": 1080,
+      "h": 720,
+      "timestamp": "2026-11-18T09:03:45+0000"
+    },
     {
       "id": "17884288161691898",
       "permalink": "https://www.instagram.com/p/DfHYUOJCF58/",
@@ -240,16 +250,6 @@
       "w": 720,
       "h": 960,
       "timestamp": "2026-09-16T10:09:56+0000"
-    },
-    {
-      "id": "17902379100355647",
-      "permalink": "https://www.instagram.com/reel/DdTU_0mI5M9/",
-      "type": "VIDEO",
-      "caption": "Bakalım  karahindibamızı nasıl yaptık 🤗🤩",
-      "image": "/images/ig/17902379100355647.webp",
-      "w": 608,
-      "h": 1080,
-      "timestamp": "2026-09-15T08:58:07+0000"
     }
   ]
 }
